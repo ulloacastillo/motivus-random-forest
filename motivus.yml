@@ -1,0 +1,16 @@
+---
+version: 1.0
+
+build:
+  compiler: mvrc
+
+package:
+  name: motivus-dtree
+  version: 0.1.0
+  metadata:
+    short_description: Decision Tree
+    license: ""
+    author: "501"
+    url: ""
+    upstream_url: "motivus-dtree"
+    long_description: ./USAGE.md
