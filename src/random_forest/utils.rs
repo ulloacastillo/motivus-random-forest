@@ -1,8 +1,12 @@
+
 use rand::prelude::*;
+
+
+
 
 pub fn split_dataset(x: &mut Vec<Vec<f32>>, y: &mut Vec<String>, train_size: f32) -> (Vec<Vec<f32>>,  Vec<String>, Vec<Vec<f32>>,Vec<String>) {
     let n_train = (x.len() as f32 * train_size) as usize;
-    
+    let n_test = x.len() - n_train;
     
     let mut x_test: Vec<Vec<f32>> = vec![];
     let mut x_train: Vec<Vec<f32>> = vec![];

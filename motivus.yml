@@ -5,12 +5,12 @@ build:
   compiler: mvrc
 
 package:
-  name: motivus-dtree
+  name: random forest
   version: 0.1.0
   metadata:
-    short_description: Decision Tree
+    short_description: Random Forest
     license: ""
     author: "501"
     url: ""
-    upstream_url: "motivus-dtree"
+    upstream_url: "random forest"
     long_description: ./USAGE.md
