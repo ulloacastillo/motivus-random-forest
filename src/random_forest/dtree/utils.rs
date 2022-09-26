@@ -87,9 +87,9 @@ pub fn unique_vals_f32(arr: &Vec<f32>) -> Vec<f32> {
             u_vals.push(*el);
         }
     }
-    println!("antes: {:?}", u_vals);
+    
     u_vals.sort_by(|a, b| a.partial_cmp(b).unwrap());
-    println!("despues: {:?}", u_vals);
+    
     let returnded = u_vals.clone();
 
     return returnded;

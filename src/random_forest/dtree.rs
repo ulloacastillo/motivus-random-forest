@@ -149,6 +149,7 @@ impl  DecisionTreeClassifier  {
             gini = gini + (p_cls * p_cls);
 
         }
+        //println!("a{}", gini);
         gini
     }
 
@@ -183,6 +184,7 @@ impl  DecisionTreeClassifier  {
 
         let gain: f32 = self.gini_index(parent) - (weight_l*self.gini_index(l_child) + weight_r*self.gini_index(r_child));
         //println!("gini: {}", self.gini_index(parent));
+        println!("b{}", gain);
         gain
 
     }

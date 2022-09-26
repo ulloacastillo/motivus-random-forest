@@ -3,14 +3,16 @@ version: 1.0
 
 build:
   compiler: mvrc
+  source: .
+  filesystem: .
 
 package:
-  name: random forest
+  name: random-forest
   version: 0.1.0
   metadata:
-    short_description: Random Forest
+    short_description: random-forest
     license: ""
     author: "501"
-    url: ""
-    upstream_url: "random forest"
+    url: "https://motivus.cl/"
+    upstream_url: "https://github.com/ulloacastillo/motivus-random-forest"
     long_description: ./USAGE.md

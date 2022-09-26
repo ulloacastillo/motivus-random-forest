@@ -88,8 +88,8 @@ fn accuracy_per_label(y: &Vec<String>, y_hat: &Vec<String>) -> Vec<f32> {
 }
 
 
-#[wasm_bindgen]
-pub fn main(json: &JsValue, train_dataset: &JsValue, train_labels: &JsValue, task_type: &JsValue)  {  //-> JsValue
+
+fn main()  {  //-> JsValue
     println!("Hello, world!");
    
     let mut file = File::open("./iris.csv").expect("No se pudo abrir el arcivo");
@@ -130,8 +130,14 @@ pub fn main(json: &JsValue, train_dataset: &JsValue, train_labels: &JsValue, tas
     
 
     let (x_train, y_train, _x_test, _y_test) = utils::split_dataset(&mut x, &mut y, 0.8);
-    let mut rf = random_forest::RandomForest::new(100, 3, 3, 4, 41);
+    let mut rf = random_forest::RandomForest::new(1, 3, 3, 4, 41);
     rf.fit(&x_train, &y_train);
+
+    let y_pred = rf.predict(&x_train);
+        
+    let percent = random_forest::accuracy(&y_pred, &y_train);
+
+    println!("{}", percent);
     
     /*
     let task: String = task_type.into_serde().unwrap();

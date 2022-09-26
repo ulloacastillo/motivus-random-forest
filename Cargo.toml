@@ -1,5 +1,5 @@
 [package]
-name = "random forest"
+name = "random-forest"
 version = "0.1.0"
 authors = ["501"]
 edition = "2018"
