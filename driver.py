@@ -31,11 +31,11 @@ par = {'n_trees': 100, 'min_samples_split': 3,
 
 task_definition = {
     # local build
-    'wasm_path': "build/random-forest-0.1.0.wasm",
-    'loader_path': "build/random-forest-0.1.0.js",
+    #'wasm_path': "build/random-forest-0.1.0.wasm",
+    #'loader_path': "build/random-forest-0.1.0.js",
     # published build
-    # 'algorithm': "random-forest",
-    # 'algorithm_version': "0.1.0",
+    'algorithm': "random-forest",
+    'algorithm_version': "0.1.0",
     'params': [par, x, y, task_type]
 }
 
